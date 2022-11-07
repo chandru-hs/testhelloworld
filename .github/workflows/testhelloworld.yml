@@ -10,4 +10,21 @@ jobs:
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: java Tests/hello-world.java 
+      - run: java Tests/hello-world.java
+  
+  TestcaseCaller:
+      runs-on: ubuntu-latest
+      steps:
+         -  uses: actions/checkout@v3
+            with:
+              repository: chandru-hs/testscript
+              path: testscript
+         - uses: actions/setup-java@v3
+           with:
+            distribution: 'temurin' # See 'Supported distributions' for available options
+            java-version: '17'
+           name: Running Testsuites from the different repo
+         - run: java Testsuites/natural-numbers.java 
+            
+          
+        
