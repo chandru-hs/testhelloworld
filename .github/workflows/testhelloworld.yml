@@ -25,7 +25,7 @@ jobs:
          #  name: Running Testsuites from the different repo
          #- run: java Testsuites/natural-numbers.java
             name: Workflow calling
-         -  uses : .github/workflows/TestScript.yml@main
+         -  uses : chandru-hs/testscript/.github/workflows/TestScript.yml@main
          
             
           
