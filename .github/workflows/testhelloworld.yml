@@ -13,6 +13,7 @@ jobs:
       - run: java Tests/hello-world.java
   
   TestcaseCaller:
+    needs: Test
     uses: chandru-hs/testscript/.github/workflows/TestScript.yml@main
     
     
