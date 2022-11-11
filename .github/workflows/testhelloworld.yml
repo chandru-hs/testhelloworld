@@ -13,7 +13,15 @@ jobs:
       - run: java Tests/hello-world.java
   
   TestcaseCaller:
-    uses: chandru-hs/testscript/.github/workflows/TestScript.yml@main
+    runs-on: windows-latest   
+    steps:
+    - uses: chandru-hs/testscript/.github/workflows/TestScript.yml@main
+      name: checkout testscript
+    - uses: actions/checkout@v3
+      with:
+        repository: chandru-hs/testscript
+    
+    
 
          
          
